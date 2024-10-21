@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+      tier: todolist
+  template:
+    metadata:
+      labels:
+        app: backend
+        tier: todolist
+    spec:
+      containers:
+        - name: backend
+          image: todo-backend:latest
+          imagePullPolicy: Never  # This ensures the image won't be pulled again
+          ports:
+            - containerPort: 5000
+          envFrom:
+            - configMapRef:
+                name: app-config  # Refer the ConfigMap here
+            - secretRef:
+                name: db-secret   # Refer the Secret here

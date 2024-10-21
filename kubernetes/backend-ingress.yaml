@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: backend-ingress
+spec:
+  rules:
+    - host: to-do-app.local  # set /etc/host correctly to map with minikube ip or external ip
+      http:
+        paths:
+          - path: /tasks
+            pathType: Prefix
+            backend:
+              service:
+                name: backend
+                port:
+                  number: 5000
