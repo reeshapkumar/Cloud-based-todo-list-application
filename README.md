@@ -1,4 +1,4 @@
-# Cloud Based To-do List Application
+# Cloud Based To-Do List Application
 
 This repository contains the source code and Kubernetes configuration files to deploy a Todo List application.
 
