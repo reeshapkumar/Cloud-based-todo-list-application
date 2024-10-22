@@ -126,8 +126,7 @@ Following prerequisites installed:
     kubectl apply -f frontend-ingress.yaml
     ```
 
-13. Access the Todo List App:
-    Open your browser and visit `http://todo-app.local` to access the Todo List App.
+13. **Access the Todo List App:**
 
 - **MySQL Configuration**: You can customize MySQL configuration by modifying the `kubernetes/mysql-deployment.yaml` file.
 
