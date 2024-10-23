@@ -252,7 +252,7 @@ volumes:
 
 **Navigate to the root of your project directory (where docker-compose.yml is located):**
 
-``bash
+```bash
 cd todo-list-mern
 Run Docker Compose:
 ```
